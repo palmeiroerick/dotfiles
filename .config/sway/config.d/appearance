@@ -1,0 +1,61 @@
+# Set wallpaper
+output * bg ~/.wallpapers/forest.png fill
+
+# Set inner/outer gaps
+gaps inner 2
+gaps outer 0
+
+# Hide titlebar on windows:
+default_border pixel 1
+
+# Default Font
+font pango:JetBrainsMonoNL Nerd Font Mono 11
+
+# Thin borders:
+smart_borders on
+
+# Title format for windows
+for_window [shell="xdg_shell"] title_format "%title (%app_id)"
+for_window [shell="x_wayland"] title_format "%class - %title"
+
+# Custom windowing rules
+for_window [class="Yad" instance="yad"] floating enable
+for_window [app_id="yad"] floating enable
+for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
+for_window [app_id="pavucontrol" ] floating enable, resize set width 40 ppt height 30 ppt
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="About"] floating enable
+for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
+for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
+for_window [title="Picture in picture"] floating enable, sticky enable
+for_window [title="waybar_htop"] floating enable, resize set width 70 ppt height 70 ppt
+for_window [title="waybar_nmtui"] floating enable
+for_window [title="Save File"] floating enable
+
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+client.background       #F8F8F2
+
+# Gtk
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Tokyonight-Dark'
+    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Ice'
+    gsettings set $gnome-schema font-name 'JetBrainsMonoNL Nerd Font Mono 11'
+    gsettings set $gnome-schema color-scheme 'prefer-dark'
+}
+
+bar {
+    swaybar_command waybar
+}

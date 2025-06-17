@@ -1,0 +1,68 @@
+{
+    "output": "HDMI-A-1",
+    "layer": "top",
+    "position": "top",
+    "spacing": 16,
+    "modules-left": [
+        "custom/launcher",
+        "sway/window"
+    ],
+    "modules-center": [
+        "sway/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "clock"
+    ],
+    "custom/launcher": {
+        "format": "<span size='x-large'>󰍜</span>",
+        "on-click": "exec rofi -show drun",
+        "tooltip": false
+    },
+    "sway/workspaces": {
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "format": "{}",
+        "max-length": 64
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "{usage:>3}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 5,
+        "format": "󰍛{:>3}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 ---",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%a, %d %b %y, %H:%M}",
+        "tooltip": false,
+        "on-click": ""
+    }
+}
