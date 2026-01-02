@@ -1,5 +1,7 @@
 _G.myFoldColumn = require('utils.foldcolumn').myFoldColumn
 
+vim.opt.path:append("**")
+
 local options = {
   backup = false,
   writebackup = false,
@@ -12,8 +14,8 @@ local options = {
   mouse = "a",
   number = true,
   relativenumber = true,
-  scrolloff = 8,
-  sidescrolloff = 16,
+  -- scrolloff = 8,
+  -- sidescrolloff = 16,
   showmode = false,
   termguicolors = true,
   wrap = false,

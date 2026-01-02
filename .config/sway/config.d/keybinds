@@ -85,3 +85,5 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
 
 # bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy 
+bindsym $mod+p exec grim ~/Downloads/screenshot-$(date +'%Y%m%d-%H%M%S').png
+bindsym $mod+Shift+p exec slurp | grim -g - ~/Downloads/screenshot-$(date +'%Y%m%d-%H%M%S').png

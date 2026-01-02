@@ -1,7 +1,7 @@
 input "type:keyboard" {
   xkb_numlock enabled
   xkb_layout "us"
-  xkb_variant intl
+  xkb_variant altgr-intl
   xkb_options "caps:escape"
 }
 

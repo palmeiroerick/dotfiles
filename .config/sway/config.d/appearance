@@ -1,3 +1,6 @@
+output HDMI-A-1 mode 1920x1080@74.973Hz
+
+
 # Set wallpaper
 output * bg ~/.wallpapers/forest.png fill
 
@@ -9,7 +12,7 @@ gaps outer 0
 default_border pixel 1
 
 # Default Font
-font pango:JetBrainsMonoNL Nerd Font Mono 11
+font pango:Source Sans Pro 11
 
 # Thin borders:
 smart_borders on
@@ -37,6 +40,8 @@ for_window [title="waybar_htop"] floating enable, resize set width 70 ppt height
 for_window [title="waybar_nmtui"] floating enable
 for_window [title="Save File"] floating enable
 
+for_window [class="osu!.exe" title="osu!.exe"] fullscreen enable
+
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
@@ -52,7 +57,8 @@ exec_always {
     gsettings set $gnome-schema gtk-theme 'Tokyonight-Dark'
     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
     gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Ice'
-    gsettings set $gnome-schema font-name 'JetBrainsMonoNL Nerd Font Mono 11'
+    gsettings set org.gnome.desktop.interface cursor-size 24
+    gsettings set $gnome-schema font-name 'Source Sans Pro 11'
     gsettings set $gnome-schema color-scheme 'prefer-dark'
 }
 

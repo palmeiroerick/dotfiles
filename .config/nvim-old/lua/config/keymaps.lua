@@ -24,7 +24,7 @@ keymap("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
 keymap("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 
 -- Buffers
-keymap("n", "<C-q>", "<cmd>bd<cr>", { desc = "Bufffer Delete" })
+keymap("n", "<C-q>", "<cmd>bd!<cr>", { desc = "Bufffer Delete" })
 keymap("n", "<S-h>", "<cmd>bp<cr>", { desc = "Prev buffer" })
 keymap("n", "<S-l>", "<cmd>bn<cr>", { desc = "Next buffer" })
 
@@ -38,3 +38,6 @@ keymap("n", "<leader>s", "<cmd>SessionSearch<cr>", { desc = "Find Files" })
 keymap("n", "<leader>hi", "<cmd>TSHighlightCapturesUnderCursor<CR>",
   { desc = "Show Treesitter highlight capture under cursor" })
 keymap("n", "<leader>hp", "<cmd>TSPlaygroundToggle<CR>", { desc = "Toggle Tresitter Playground" })
+
+keymap("n", "<C-c>", "ciw{{c1::<C-R>\"}}<Esc>")
+keymap("v", "<C-c>", "c{{c1::<C-R>\"}}<Esc>")

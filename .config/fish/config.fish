@@ -1,4 +1,4 @@
-alias ls="exa --icons"
+# alias ls="exa --icons"
 
 fish_vi_key_bindings
 set fish_cursor_default block
@@ -11,3 +11,5 @@ set -g fish_vi_force_cursor 1
 set -g fish_greeting ""
 
 starship init fish | source
+
+fish_add_path /home/erick/.spicetify
