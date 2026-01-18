@@ -1,21 +1,19 @@
-_G.myFoldColumn = require('utils.foldcolumn').myFoldColumn
-
 vim.opt.path:append("**")
 
 local options = {
   backup = false,
   writebackup = false,
   expandtab = true,
-  shiftwidth = 2,
+  shiftwidth = 4,
   smartindent = true,
-  softtabstop = 2,
-  tabstop = 2,
+  softtabstop = 4,
+  tabstop = 4,
   cursorline = true,
   mouse = "a",
   number = true,
   relativenumber = true,
-  -- scrolloff = 8,
-  -- sidescrolloff = 16,
+  scrolloff = 8,
+  sidescrolloff = 16,
   showmode = false,
   termguicolors = true,
   wrap = false,
@@ -28,7 +26,6 @@ local options = {
   ignorecase = true,
   updatetime = 250,
   smartcase = true,
-  statuscolumn = " %l %s%{v:lua.myFoldColumn()} ",
   cmdheight = 0,
   timeout = true,
   timeoutlen = 300,

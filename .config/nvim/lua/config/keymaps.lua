@@ -39,5 +39,5 @@ keymap("n", "<leader>hi", "<cmd>TSHighlightCapturesUnderCursor<CR>",
   { desc = "Show Treesitter highlight capture under cursor" })
 keymap("n", "<leader>hp", "<cmd>TSPlaygroundToggle<CR>", { desc = "Toggle Tresitter Playground" })
 
-keymap("n", "<C-c>", "ciw{{c1::<C-R>\"}}<Esc>")
-keymap("v", "<C-c>", "c{{c1::<C-R>\"}}<Esc>")
+-- keymap("n", "<C-c>", "ciw{{c1::<C-R>\"}}<Esc>")
+-- keymap("v", "<C-c>", "c{{c1::<C-R>\"}}<Esc>")
