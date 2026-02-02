@@ -41,3 +41,7 @@ keymap("n", "<leader>hp", "<cmd>TSPlaygroundToggle<CR>", { desc = "Toggle Tresit
 
 -- keymap("n", "<C-c>", "ciw{{c1::<C-R>\"}}<Esc>")
 -- keymap("v", "<C-c>", "c{{c1::<C-R>\"}}<Esc>")
+
+-- Terminal
+keymap('n', '<leader>t', ':terminal<CR>', opts)
+keymap('t', '<C-n>', '<C-\\><C-n>', opts)
