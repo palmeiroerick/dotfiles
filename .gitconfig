@@ -1,0 +1,12 @@
+[user]
+	name = palmeiroerick
+	email = 148393698+palmeiroerick@users.noreply.github.com
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
